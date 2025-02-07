@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="stylesheet" href="{% static 'css/indentation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsiveness.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+    {% block title %} {% endblock %}
+    {% block css %} {% endblock %}
+</head>
+<body>
+  {% block body %}
+
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <style>
+    #return-btn {
+      position: fixed;
+      top: -1rem;
+      right: 0;
+      cursor: pointer;
+      font-size: 3rem;
+      width: 3rem;
+    }
+  </style>
+{% endblock %}
+  
+{% block body %}
+
+  <div>
+    <a id="return-btn" href="{% url 'index' %}">◀️</a>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+
+
+body {
+  background-image: linear-gradient(15deg, rgb(20, 20, 20), rgb(33, 66, 99), rgb(66, 99, 132));
+  font-family: Georgia;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+main {
+  min-height: 100vh;
+}
+
+#pizza-logo {
+  font-size: 5rem;
+}
+
+#sign-up-btn {
+  background-color: rgb(33, 66, 132);
+  border: rgb(33, 66, 255) solid 1px;
+  border-radius: .7rem;
+  color: rgb(170, 220 ,255);
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 3rem;
+  text-decoration: none;
+  text-shadow: 0 0 1rem black;
+}
+
+#sign-in-btn {
+  background-color: rgb(50, 150, 50);
+  border: rgb(50, 255, 50) solid 1px;
+  border-radius: .7rem;
+  color: black;
+  margin: .35rem;
+  padding: .7rem;
+  text-decoration: none;
+  text-shadow: 0 0 1rem black;
+}

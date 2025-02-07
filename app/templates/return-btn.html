@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <style>
+    #return-btn {
+      position: fixed;
+      top: -.5rem;
+      right: .8rem;
+      cursor: pointer;
+      font-size: 3rem;
+      width: 3rem;
+    }
+  </style>
+{% endblock %}
+  
+{% block body %}
+
+  <div>
+    <a id="return-btn" href="{% url 'worker-menu' %}">↩️</a>
+  </div>
+
+{% endblock %}

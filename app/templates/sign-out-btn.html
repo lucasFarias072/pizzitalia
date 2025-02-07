@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <style>
+    #return-btn {
+      position: fixed;
+      top: 0rem;
+      left: 0;
+      cursor: pointer;
+      font-size: 3rem;
+      width: 3rem;
+    }
+  </style>
+{% endblock %}
+  
+{% block body %}
+
+  <div>
+    <a id="return-btn" href="{% url 'logout' %}">📴</a>
+  </div>
+
+{% endblock %}

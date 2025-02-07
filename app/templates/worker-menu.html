@@ -1,0 +1,20 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Menu do funcionário</title>{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/worker_menu.css' %}">
+{% endblock %}
+{% block body %}
+{% include 'sign-out-btn.html' %}
+  <main class="flex column going-center">
+    <h1>O que fará, {{ user.username }}?</h1>
+    <div id="worker-actions" class="flex row going-center deep-gap">
+      <a href="{% url 'order-entries' %}" id="manage-orders">controle de pedidos</a>
+      <a href="{% url 'worker-add-order' %}" id="add-order">cadastro de pedido</a>
+      <a href="{% url 'worker-add-client' %}" id="add-client">cadastro de cliente</a>
+    </div>
+  </main>
+{% endblock %}

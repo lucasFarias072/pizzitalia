@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Django Shell procedure files
+django_shell_create_instances_categories.py
+django_shell_env.py

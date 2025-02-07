@@ -1,0 +1,90 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Cadastrar pedido</title>{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/worker_add_order.css' %}">
+{% endblock %}
+
+{% block body %}
+  {% include 'return-btn.html' %}
+
+  <div id="stats" class="flex column going-center gap">
+    <input type="text" class="pizza-input vanished" name="pizza-types" id="pizza-types">
+    <input type="text" class="pizza-input vanished" name="pizza-sizes" id="pizza-sizes">
+    <input type="text" class="pizza-input vanished" name="pizza-prices" id="pizza-prices">
+    <div id="prices-table" class="flex row going-center">
+
+    </div>
+    <button id="calculate-order">calcular pedido 💸</button>
+  </div>
+
+  <div id="sizes" class="flex row going-center gap">
+    <p class="card-smaller pizza-size" id="pizza-average">M</p>
+    <p class="card-smaller pizza-size" id="pizza-large">G</p>
+    <p class="card-smaller pizza-size" id="pizza-larger">GG</p>
+  </div>
+
+  <div id="query-content" class="flex column going-center">
+    {% for costumer in all_costumers %}
+      <p class="costumer vanished">{{ costumer.full_name }} [{{ costumer.costumer_id }}]</p>
+    {% endfor %}
+  </div>
+
+  <main class="flex column going-center">
+    
+    <div id="flavours" class="flex row going-center gap">
+      {% for cat in all_categories %}
+        <div class="cat flex column going-center card">
+          <p class="">{{ cat.signature }}</p>
+          <p class="">{{ cat.label }}</p>
+          <p class="vanished">{{ cat.price_for_medium }}/{{ cat.price_for_large }}/{{ cat.price_for_oversized }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div id="client-query">
+      <form action="{% url 'worker-add-order' %}" method="post">
+        {% csrf_token %}
+        <div id="" class="flex row going-center">
+          <input type="text" id="costumer_id" name="costumer_id" placeholder="pesquisar cliente por nome">
+          
+          <span>{{ query_result }}</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex column going-center">
+      <span id="place-logo">🍕</span>
+      <h1>Cadastro do pedido</h1>
+      <h2>Etapas:</h2>
+      <div class="flex column going-left">
+        <ol>
+          <li>pesquise o cliente na barra superior esquerda</li>
+          <li>confirme sua identidade e insira seu id na caixa abaixo</li>
+          <li>selecione o sabor (acima), depois o tamanho (lado direito) e o preço (lado esquerdo)</li>
+        </ol>
+      </div>
+    </div>
+
+    <form action="{% url 'worker-add-order' %}" method="post">
+      {% csrf_token %}
+      <div class="flex column going-center">
+        <!-- The values of these inputs are sent -->
+        <input type="text" id="orders_list" name="orders_list" class="vanished">
+        <input type="text" id="sizes_list" name="sizes_list" class="vanished">
+        <input type="text" id="order_bill" name="order_bill" class="vanished">
+        <input type="text" id="client_owner" name="client_owner", placeholder="id do cliente">
+        <!-- sender -->
+        <input type="submit" id="enable-order" name="pizza-order" value="cadastrar pedido" class="vanished">
+      </div>
+    </form>
+  </main>
+
+  <script src="{% static 'js/worker_add_order.js' %}">
+    
+  </script>
+  
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Registro dos pedidos</title>{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/order_entries.css' %}">
+{% endblock %}
+  
+{% block body %}
+
+  <main class="flex column going-left">
+    {% include 'return-btn.html' %}
+    <h1>Pedidos</h1>
+
+    <table>
+      <tr>
+        <th>Nome do cliente</th>
+        <th>Pizzas do pedido</th>
+        <th>Tamanho das pizzas</th>
+        <th>Total</th>
+      </tr>
+      
+      <tbody>
+        {% for order in each_order %}
+          <tr>
+            <td>{{ order.client_owner }}</td>
+            <td>{{ order.orders_list }}</td>
+            <td>{{ order.sizes_list }}</td>
+            <td>R$ {{ order.order_bill }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    
+  </main>
+
+{% endblock %}

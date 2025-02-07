@@ -1,0 +1,31 @@
+
+
+body {
+  background-image: linear-gradient(15deg, rgb(20, 20, 20), rgb(33, 66, 99), rgb(66, 99, 132));
+}
+
+h1 {
+  color: white;
+  text-shadow: 0 0 1rem rgb(170, 220, 250);
+}
+
+input {
+  border-radius: .5rem;
+  outline: none;
+  padding: .7rem;
+}
+
+main {
+  min-height: 100vh;
+}
+
+#backend-manager {
+  background-color: rgb(50, 150, 50);
+  border: rgb(50, 255, 50) solid 1px;
+  border-radius: .7rem;
+  color: black;
+  margin: .35rem;
+  padding: .7rem;
+  text-decoration: none;
+  text-shadow: 0 0 1rem black;
+}

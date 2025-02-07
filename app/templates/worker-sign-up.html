@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Cadastrar funcionário</title>{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/worker_sign_up.css' %}">
+{% endblock %}
+{% block body %}
+  <main class="flex column going-center">
+    {% include 'return-btn-off.html' %}
+    <h1>Cadastrar Funcionário</h1>
+    
+    <!-- Takes to the place where the worker can login -->
+    <form action="{% url 'worker-sign-up' %}" autocomplete="off" method="post">
+      {% csrf_token %}
+      <div id="fields-box" class="flex column going-center gap">
+        <p>preencha os dados</p>
+        <input type="text" name="username" autofocus placeholder="nome">
+        <input type="password" name="password" placeholder="senha">
+        <input id="backend-manager" type="submit" value="cadastrar">
+      </div>
+  </form>
+  </main>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Página inicial</title>{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+    <main class="flex column going-center">
+        {% if user.is_anonymous %}
+            <span id="pizza-logo">Pizzitália 🍕</span>
+            
+            <div id="access-buttons" class="flex row going-center">
+
+              <a id="sign-up-btn" href="{% url 'worker-sign-up' %}">cadastro</a>
+              <a id="sign-up-btn" href="{% url 'worker-sign-in' %}">entrar</a>
+            </div>
+
+        {% else %}
+          <div class="flex column going-center">
+            <h1>Boas vindas, {{ user.username }}</h1>
+            <p>começe suas atividades</p>
+            <a id="sign-up-btn" href="{% url 'worker-menu' %}">menu</a>
+          </div>
+          
+        {% endif %}
+    </main>
+{% endblock %}

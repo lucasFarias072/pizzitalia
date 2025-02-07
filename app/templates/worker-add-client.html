@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>Cadastrar cliente</title>{% endblock %}
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/worker_add_client.css' %}">
+{% endblock %}
+{% block body %}
+  {% include 'return-btn.html' %}
+  <main class="flex column going-center">
+    <div class="flex column going-center">
+      <span id="place-logo">🍕</span>
+      <h1>Cadastro de novo cliente</h1>
+    </div>
+    
+    <form action="{% url 'worker-add-client' %}" method="post">
+      {% csrf_token %}
+      <div class="flex column going-center gap">
+        <input type="text" name="full_name" placeholder="nome">
+        <input type="text" name="address" placeholder="endereço">
+        <input type="text" name="neighborhood" placeholder="bairro">
+        <input type="text" name="phone" placeholder="telefone">
+        <input id="backend-manager-btn" type="submit" value="cadastrar">
+    </div>
+    </form>
+  </main>
+{% endblock %}
