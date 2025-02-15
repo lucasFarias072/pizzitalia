@@ -14,9 +14,15 @@
             <span id="pizza-logo">Pizzitália 🍕</span>
             
             <div id="access-buttons" class="flex row going-center">
+              <div class="flex column going-center">
+                <h3>Funcionário novo?</h3>
+                <a id="sign-up-btn" href="{% url 'worker-sign-up' %}">cadastrar</a>
+              </div>
 
-              <a id="sign-up-btn" href="{% url 'worker-sign-up' %}">cadastro</a>
-              <a id="sign-up-btn" href="{% url 'worker-sign-in' %}">entrar</a>
+              <div class="flex column going-center">
+                <h3>Já é funcionário?</h3>
+                <a id="sign-up-btn" href="{% url 'worker-sign-in' %}">entrar</a>
+              </div>
             </div>
 
         {% else %}

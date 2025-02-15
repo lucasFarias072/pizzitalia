@@ -51,16 +51,29 @@ p {
 
 .card-smaller {
   background-color: #222;
-  border: rgb(200, 200, 0) solid 1px;
   border-radius: .5rem;
   box-shadow: 0 0 1rem #222;
-  color: rgb(200, 200, 0);
   cursor: pointer;
   padding: .2rem;
-  text-shadow: 0 0 .5rem yellow;
   width: 2.5rem;
   height: 3.2rem;
   margin: auto;
+}
+
+.pizza-average {
+  border: white solid 1px;
+  color: white;
+  text-shadow: 0 0 1rem white;
+}
+.pizza-large {
+  border: yellow solid 1px;
+  color: yellow;
+  text-shadow: 0 0 1rem yellow;
+}
+.pizza-larger {
+  border: orangered solid 1px;
+  color: orangered;
+  text-shadow: 0 0 1rem orangered;
 }
 
 #client-query {
@@ -68,6 +81,13 @@ p {
   top: .1rem;
   left: .1rem;
 }
+
+#prices-table {
+  padding: 1rem;
+  position: fixed;
+  bottom: 5rem;
+  right: .1rem;
+} 
 
 #query-content {
   position: fixed;
@@ -86,12 +106,11 @@ p {
 }
 
 .price-style {
-  padding: .5rem;
+  padding: .33rem;
   background-color: #222;
-  border: #222 solid 1px;
   border-radius: .5rem;
-  color: yellow;
-  margin: 0 1rem;
+  cursor: pointer;
+  margin: 0 .33rem;
 }
 
 #sizes {

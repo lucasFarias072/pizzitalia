@@ -1,4 +1,13 @@
-
+function createBillCard(billValue) {
+  const billBanner = document.createElement('span')
+  billBanner.style.backgroundColor = 'rgb(128, 255, 128)'
+  billBanner.style.border = 'solid 1px #222'
+  billBanner.style.borderRadius = '.5rem'
+  billBanner.style.margin = '0 1rem'
+  billBanner.style.padding = '.2rem 1rem'
+  billBanner.textContent = `R$ ${billValue}`
+  return billBanner 
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   const costumerId = document.getElementById('costumer_id')
@@ -36,12 +45,21 @@ document.addEventListener('DOMContentLoaded', function() {
       const thisPizzaAveragePrice = document.createElement('span')
       const thisPizzaLargePrice = document.createElement('span')
       const thisPizzaLargerPrice = document.createElement('span')
+      
+      // Showing each price of each pizza based on category
       thisPizzaAveragePrice.textContent = pricesForThisPizza[0]
       thisPizzaLargePrice.textContent = pricesForThisPizza[1]
       thisPizzaLargerPrice.textContent = pricesForThisPizza[2]
+      
+      // todo: Give each price of a pizza, their style
       thisPizzaAveragePrice.classList.add('price-style')
       thisPizzaLargePrice.classList.add('price-style')
       thisPizzaLargerPrice.classList.add('price-style')
+
+      thisPizzaAveragePrice.classList.add('pizza-average')
+      thisPizzaLargePrice.classList.add('pizza-large')
+      thisPizzaLargerPrice.classList.add('pizza-larger')
+      
       thisPizzaAveragePrice.addEventListener('click', () => {
         pizzaPrices.value += thisPizzaAveragePrice.textContent + "/"
         pricesTable.innerHTML = ""
@@ -74,12 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
       if (ordersInputs[i] != '') {
         bill += parseFloat(ordersInputs[i])
       }
-    } 
-    const billBanner = document.createElement('span')
-    billBanner.classList.add('price-style')
-    billBanner.textContent = `Valor a pagar: R$ ${bill}`
-    pricesTable.appendChild(billBanner)
+    }
     
+    const billBanner = createBillCard(bill)
+    document.getElementById('stats').appendChild(billBanner)
+    calculateOrder.setAttribute('disabled', '')
+    
+    // const billBanner = document.createElement('span')
+    // billBanner.classList.add('price-style')
+    // billBanner.textContent = `Valor a pagar: R$ ${bill}`
+    // pricesTable.appendChild(billBanner)
+    
+    // todo: Capture each data to be sent to the backend
     document.getElementById('enable-order').classList.remove('vanished')
     document.getElementById('orders_list').value = pizzaTypes.value
     document.getElementById('sizes_list').value = pizzaSizes.value
