@@ -1,0 +1,143 @@
+body {
+  background-image: linear-gradient(15deg, rgb(20, 20, 20), rgb(33, 66, 99), rgb(66, 99, 132));
+}
+
+main {
+  min-height: 100vh;
+}
+
+input {
+  border-radius: .5rem;
+  outline: none;
+  padding: .7rem;
+}
+
+li {
+  color: rgb(170, 220, 255);
+  letter-spacing: 1px;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+#calculate-order {
+  background-color: rgb(50, 200, 90);
+  border: mediumseagreen solid 1px;
+  border-radius: .3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+.card {
+  background-color: #222;
+  border: black solid 1px;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem #222;
+  color: orangered;
+  cursor: pointer;
+  padding: .2rem;
+  text-shadow: 0 0 .5rem orangered;
+  width: 5.5rem;
+  height: 6.2rem
+}
+
+.card:hover {
+  box-shadow: 0 0 1rem orangered;
+  transition: linear .7s;
+}
+
+.card-smaller {
+  background-color: #222;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem #222;
+  cursor: pointer;
+  padding: .2rem;
+  width: 2.5rem;
+  height: 3.2rem;
+  margin: auto;
+}
+
+.pizza-average {
+  border: white solid 1px;
+  color: white;
+  text-shadow: 0 0 1rem white;
+}
+.pizza-large {
+  border: yellow solid 1px;
+  color: yellow;
+  text-shadow: 0 0 1rem yellow;
+}
+.pizza-larger {
+  border: orangered solid 1px;
+  color: orangered;
+  text-shadow: 0 0 1rem orangered;
+}
+
+#client-query {
+  position: fixed;
+  top: .1rem;
+  left: .1rem;
+}
+
+#prices-table {
+  padding: 1rem;
+  position: fixed;
+  bottom: 5rem;
+  right: .1rem;
+} 
+
+#query-content {
+  position: fixed;
+  top: 3.3rem;
+  left: .1rem;
+  min-height: 75vh;
+  background-color: rgb(33, 66, 99);
+  border-radius: .5rem;
+  border: #222 solid 1px;
+  opacity: .5;
+  overflow-y: scroll;
+}
+
+#place-logo {
+  font-size: 5rem;
+}
+
+.price-style {
+  padding: .33rem;
+  background-color: #222;
+  border-radius: .5rem;
+  cursor: pointer;
+  margin: 0 .33rem;
+}
+
+#sizes {
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+}
+
+#stats {
+  position: fixed;
+  bottom: .5rem;
+  left: .5rem;
+}
+
+.pizza-input {
+  font-size: 1.5rem;
+}
+
+.query-beauty {
+  background-color: rgb(200, 200, 0);
+  border: #222 solid 1px;
+  border-radius: .5rem;
+  color: black;
+  padding: .3rem;
+  margin: 0 .5rem;
+}
+
+.vanished {
+  display: none;
+}

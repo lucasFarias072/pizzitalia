@@ -1,0 +1,33 @@
+
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-flow: column wrap;
+}
+
+.row {
+  flex-flow: row wrap;
+}
+
+.gap {
+  gap: .5rem;
+}
+
+.deep-gap {
+  gap: 2.5rem;
+}
+
+.going-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.going-left {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}

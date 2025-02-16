@@ -1,0 +1,55 @@
+
+
+body {
+  background-image: linear-gradient(15deg, rgb(20, 20, 20), rgb(33, 66, 99), rgb(66, 99, 132));
+}
+
+main {
+  min-height: 100vh;
+}
+
+#worker-actions {
+  padding: 0 2rem;
+}
+
+#worker-actions #manage-orders {
+  background-color: rgb(0, 100, 200);
+  border-radius: .3rem;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 3rem .5rem;
+}
+
+#worker-actions #add-client {
+  background-color: rgb(0, 200, 100);
+  border-radius: .3rem;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 3rem .5rem;
+}
+
+#worker-actions #add-order {
+  background-color: rgb(200, 200, 100);
+  border-radius: .3rem;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 3rem .5rem;
+}
+
+#worker-actions #add-order:hover {
+  box-shadow: 0 0 1rem rgb(200, 200, 100);
+  transition: linear .5s;
+}
+
+#worker-actions #manage-orders:hover {
+  box-shadow: 0 0 1rem rgb(0, 100, 200);
+  transition: linear .5s;
+}
+
+#worker-actions #add-client:hover {
+  box-shadow: 0 0 1rem rgb(0, 200, 100);
+  transition: linear .5s;
+}
